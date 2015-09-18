@@ -1,0 +1,38 @@
+<h1>Flapper Blog <small>Login</small></h1>
+<hr />
+<%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: "form-horizontol" }) do |f| %>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+        <div class="col-sm-10">
+          <%= f.email_field :email, autofocus: true, class: "form-control" %>
+        </div>
+      </div>
+      <br /><br />
+      <div class="form-group">
+        <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+        <div class="col-sm-10">
+          <%= f.password_field :password, autocomplete: "off", class: "form-control" %>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <div class="checkbox">
+            <% if devise_mapping.rememberable? -%>
+              <%= f.check_box :remember_me %>
+              <%= f.label :remember_me %>
+            <% end -%>
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <%= f.submit "Log in", class: "btn btn-info" %> or
+          <%= render "devise/shared/links" %>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
+
