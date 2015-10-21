@@ -1,0 +1,31 @@
+<div class="panel panel-info">
+	<div class="panel-heading">
+		<h2><%= @post.title %></h2>
+		Published At: <strong><%= @post.published_at.strftime("%d %B, %Y") if !@post.published_at.blank? %></strong>
+	</div>
+	<div class="panel-body">
+		<%= @post.description %>
+		<br /><br />	
+		<a href="<%= edit_post_path(@post.id) %>" class="label label-default">Edit this post</a>
+	</div>
+</div>
+
+<div class="panel panel-success">
+	<div class="panel-heading">
+		<h2>Comment on this post</h2>
+	</div>
+	<div class="panel-body">
+		<ul class="list-group">
+		  <li class="list-group-item">
+		  	<span class="commenter-name">Ali Ahmed Wrote:	</span>
+		  	<br /> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		  tempor incididunt ut labore et dolore magna aliqua.
+		  	<br /><span class="comment-date label label-default">24 Spet, 2015</span></li>
+		  <li class="list-group-item">Dapibus ac facilisis in</li>
+		  <li class="list-group-item">Morbi leo risus</li>
+		  <li class="list-group-item">Porta ac consectetur ac</li>
+		  <li class="list-group-item">Vestibulum at eros</li>
+		</ul>
+		
+	</div>
+</div>

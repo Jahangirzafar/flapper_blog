@@ -1,1 +1,149 @@
-isdnjkcasdn
+<script type="text/javascript">
+	function initialize() {
+	  var mapProp = {
+	    center:new google.maps.LatLng(51.508742, -0.120850),
+	    zoom:5,
+	    mapTypeId:google.maps.MapTypeId.ROADMAP
+	  };
+	  var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+	}
+	google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+
+<div class="container">
+    <!-- Example row of columns -->
+    <div class="row">
+			<div class="col-sm-12 col-lg-12">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h3><i class="icon-map-marker main-color"></i> Location</h3>
+					</div>
+					<div class="panel-body">
+						<!-- <div class="embed-responsive embed-responsive-16by9"> -->
+						  <!-- <iframe class="embed-responsive-item" src="http://www.map-generator.org/b0e8940f-c470-4bcd-b903-a5fbf28936bd/iframe-map.aspx"></iframe> -->
+						  <iframe src="http://www.map-generator.org/744c8d2e-0615-4991-ab90-0c41c11ee6bc/iframe-map.aspx" scrolling="no" width="1100px" height="450px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><br><small><a href="http://www.map-generator.org/744c8d2e-0615-4991-ab90-0c41c11ee6bc/large-map.aspx" target="_blank">Open large map<a/></small>
+						<!-- </div> -->
+					</div>	
+			</div>
+		</div>
+	<hr>
+	<div class="row">
+		<div class="col-sm-4 col-lg-4">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3><i class="icon-pushpin main-color"></i> Our office</h3>
+				</div>
+				<div class="panel-body">
+					<address>
+					<strong>VERSO, Inc.</strong><br>
+					795 Folsom Ave, Suite 600<br>
+					San Francisco, CA 94107<br>
+					<i class="icon-phone-sign"></i> + 4 (123) 456-7890
+					</address>
+				</div>
+			</div>
+			<div class="panel panel-default">
+				<div class="panel-heading">
+				  <h3><i class="icon-time main-color"></i> Business hours</h3>
+				</div>
+				<div class="panel-body">
+					<table class="table table-hover">
+					  <thead>
+							<tr>
+							  
+							  <th>Day</th>
+							  <th>Time</th>
+							</tr>
+				  	</thead>
+				  	<tbody>
+							<tr class="success">
+							  <td>Monday</td>
+							  <td>9:00 to 18:00</td>
+							</tr>
+							<tr class="success">
+							  <td>Tuesday</td>
+							  <td>9:00 to 18:00</td>
+							</tr>
+							<tr class="success">
+							 
+							  <td>Wednesday</td>
+							  <td>9:00 to 18:00</td>
+							</tr>
+							<tr class="success">
+							 
+							  <td>Thursday</td>
+							  <td>9:00 to 18:00</td>
+							</tr>
+							<tr class="success">
+							 
+							  <td>Friday</td>
+							  <td>9:00 to 18:00</td>
+							</tr>
+							<tr class="warning">
+							
+							  <td>Saturday</td>
+							  <td>9:00 to 14:00</td>
+							</tr>
+							<tr class="danger">
+							
+							  <td>Sunday</td>
+							  <td>day off</td>
+							</tr>
+			 	 		</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		<div class="col-sm-8 col-lg-8">
+	  
+			<div class="panel panel-default">
+				<div class="panel-heading">	
+					<h3 class="">
+						<i class="icon-envelope main-color"></i>
+						Feel free to contact us
+					</h3>
+				<div class="panel-body">
+				<!-- CONTACT FORM https://github.com/jonmbake/bootstrap3-contact-form -->
+			
+				<form role="form" id="feedbackForm">
+		      <div class="form-group">
+						<input type="text" class="form-control" id="name" name="name" placeholder="Name">
+						<span class="help-block" style="display: none;">Please enter your name.</span>
+		      </div>
+		      <div class="form-group">
+						<input type="email" class="form-control" id="email" name="email" placeholder="Email Address">
+						<span class="help-block" style="display: none;">Please enter a valid e-mail address.</span>
+		      </div>
+		      <div class="form-group">
+						<textarea rows="10" cols="100" class="form-control" id="message" name="message" placeholder="Message"></textarea>
+						<span class="help-block" style="display: none;">Please enter a message.</span>
+		      </div>
+		      <!-- <img id="captcha" src="library/vender/securimage/securimage_show.php" alt="CAPTCHA Image">
+	      	<a href="#" onclick="document.getElementById('captcha').src = 'library/vender/securimage/securimage_show.php?' + Math.random(); return false" class="btn btn-info btn-sm">Show a Different Image</a> -->
+		      <br>
+		      <div class="form-group" style="margin-top: 10px;">
+						<input type="text" class="form-control" name="captcha_code" id="captcha_code" placeholder="For security, please enter the code displayed in the box.">
+						<span class="help-block" style="display: none;">Please enter the code displayed within the image.</span>
+		      </div>
+			      
+		      <span class="help-block" style="display: none;">Please enter a the security code.</span>
+		      <button type="submit" id="feedbackSubmit" class="btn btn-primary btn-lg" style="display: block; margin-top: 10px;">Send Feedback</button>
+		    </form>
+			<!-- END CONTACT FORM -->
+			</div>
+		</div>			
+	</div>
+</div>
+
+<hr>
+
+<footer>
+	<div class="container">
+		<div class="row">
+			<div class="col-12 col-lg-12">
+				<p><a href="http://www.bootstraptor.com" title="bootstrap 3 templates">Bootstraptor.com © Company 2013</a></p>
+			</div>
+		</div>
+	</div>
+</footer>
+    

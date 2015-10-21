@@ -1,0 +1,58 @@
+<div id="masthead">  
+  <div class="container">
+    <div class="row">
+      <div class="col-md-7">
+        <h1>Posts
+          <p class="lead">Write and share your views. <a href="/posts/new" class="btn btn-success">Create</a>  new Post</p>
+        </h1>
+      </div>
+    </div> 
+  </div><!-- /cont -->
+</div>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12"> 
+      <div class="panel">
+        <div class="panel-body">
+          <% if !@posts.blank? %>
+            <% @posts.each do |post| %>    
+                <!--/stories-->
+        		  <div class="row">    
+                <br>
+                <div class="col-md-2 col-sm-3 text-center">
+                  <a class="story-img" href="#">
+                    <img src="//placehold.it/100" style="width:100px;height:100px" class="img-circle">
+                  </a>
+                </div>
+                <div class="col-md-10 col-sm-9">
+                  <h3><%= post.title %></h3>
+                  <div class="row">
+                    <div class="col-xs-9">
+                      <p><%= post.description %></p>
+                      <p class="lead"><a href="<%= post_path(post.id) %>" class="btn btn-default">Read More</a></p>
+                      <p class="pull-right"></p>
+                      <ul class="list-inline">
+                        <li><a href="#"><%= post.published_at.strftime("%d %B, %Y") if !post.published_at.blank? %></a></li>
+                        <li><a href="#"><i class="glyphicon glyphicon-comment"></i> 4 Comments</a></li>
+                      </ul>
+                      </div>
+                    <div class="col-xs-3"></div>
+                  </div>
+                  <br><br>
+                </div>
+              </div>
+            <% end %>
+            <hr>
+            <!--/stories-->
+        
+            <a href="/" class="btn btn-primary pull-right btnNext">More <i class="glyphicon glyphicon-chevron-right"></i></a>  
+          <% else %>
+            <div class="alert alert-success" role="alert">There are no <strong>Posts</strong> publish.</div>
+          <% end %>
+        </div>                                  
+      </div>                                        
+    </div><!--/col-12-->
+  </div>
+</div>
